@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MK体育 · 简明使用指南</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: linear-gradient(145deg, #fce4ab 0%, #f9c48b 50%, #f3b07c 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1.2rem;
+      line-height: 1.6;
+      color: #2e2b27;
+    }
+
+    .wrapper {
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(2px);
+      border-radius: 32px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+      padding: 2.4rem 2rem;
+      margin-bottom: 2rem;
+      transition: all 0.2s ease;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+      color: #261f1a;
+    }
+
+    .subhead {
+      font-size: 1.1rem;
+      color: #5a4e44;
+      border-left: 4px solid #d9975a;
+      padding-left: 1rem;
+      margin: 0.6rem 0 1.8rem 0;
+      font-weight: 400;
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.8rem 0;
+    }
+
+    .highlight-item {
+      background: #fdf3e7;
+      border-radius: 18px;
+      padding: 1.2rem 1rem;
+      border: 1px solid #f1dcc9;
+    }
+
+    .highlight-item h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: #3d322b;
+    }
+
+    .highlight-item p {
+      font-size: 0.95rem;
+      color: #4f443b;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e5c9ae;
+      color: #231e1a;
+      padding: 0.2rem 0.8rem;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+      margin-right: 0.4rem;
+    }
+
+    p, li {
+      color: #3a322c;
+    }
+
+    a {
+      color: #a8632c;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      color: #7f4b21;
+      border-bottom: 1px solid #a8632c;
+    }
+
+    .link-button {
+      display: inline-block;
+      background: #f3e3d2;
+      color: #2e241e;
+      padding: 0.7rem 1.8rem;
+      border-radius: 60px;
+      font-weight: 500;
+      border: 1px solid #e1cbb6;
+      transition: background 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      border-bottom: none;
+      font-size: 0.95rem;
+    }
+
+    .link-button:hover {
+      background: #ebd5be;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      border-bottom: none;
+      color: #1f1814;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "· ";
+      color: #c28f62;
+      font-weight: 600;
+    }
+
+    .faq-item {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #efe0d1;
+    }
+
+    .faq-item:last-child {
+      border-bottom: 0;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+      color: #2e241e;
+    }
+
+    .faq-a {
+      font-size: 0.95rem;
+      color: #4d4037;
+    }
+
+    .note {
+      background: #f6ecdf;
+      border-radius: 18px;
+      padding: 1rem 1.2rem;
+      font-size: 0.9rem;
+      margin-top: 1.5rem;
+      color: #3b3028;
+    }
+
+    .footer-note {
+      font-size: 0.85rem;
+      color: #5b4d42;
+      text-align: center;
+      margin-top: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 1.8rem 1.2rem;
+        border-radius: 24px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      .highlight-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+      }
+      .link-button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="card">
+      <h1>MK体育 · 简引</h1>
+      <div class="subhead">一份关于使用思路与访问节制的轻量指南</div>
+
+      <p style="margin-bottom: 0.8rem;">
+        如果你正在寻找一个信息聚合、赛事讨论相对集中的平台，<a href="https://site-zh-mk.com">MK体育</a> 
+        提供了一个值得留意的选择。它不像常见的门户那样铺满弹窗与横幅，界面和内容组织更偏向于传统论坛形态。
+        这里没有复杂的算法推荐，多数信息依赖用户主动浏览和筛选。
+      </p>
+      <p>
+        下面从几个实用角度，梳理它的特点与使用场景。无论你是想快速了解某项运动动态，还是保持一种低频率的信息获取，
+        以下内容或许能帮你判断是否适合自己。
+      </p>
+
+      <div class="highlight-grid">
+        <div class="highlight-item">
+          <h3>📋 内容偏向</h3>
+          <p>以足球、篮球、网球等主流项目为主，也涵盖格斗、电竞等板块。帖子更新节奏偏日常，没有高强度刷屏感。</p>
+        </div>
+        <div class="highlight-item">
+          <h3>🧭 导航方式</h3>
+          <p>按版块分区，没有个性化推送。适合有明确信息目标的人，也适合闲逛式浏览。</p>
+        </div>
+        <div class="highlight-item">
+          <h3>📎 访问注意</h3>
+          <p>页面加载速度中等，部分图片外链可能不稳定。建议使用稳定的网络环境，并留意链接指向。</p>
+        </div>
+        <div class="highlight-item">
+          <h3>🔁 社区氛围</h3>
+          <p>用户讨论风格偏直接，干货与闲聊并存。不参与无意义争吵的话，体验还算清爽。</p>
+        </div>
+      </div>
+
+      <p style="margin-bottom: 1.2rem;">
+        对大多数日常使用者来说，<a href="https://site-zh-mk.com">MK体育</a> 更像一个安静的信息角落，
+        不会频繁推送通知，也不会刻意延长你的停留时间。如果你受够了充满广告和短视频的体育应用，这里可能会让你感到放松。
+      </p>
+
+      <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1.4rem 0 0.6rem;">
+        <span class="badge">无开屏广告</span>
+        <span class="badge">可匿名浏览</span>
+        <span class="badge">回帖无需注册</span>
+        <span class="badge">无推荐算法</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.8rem; color: #261f1a;">📌 适宜场景与提醒</h2>
+      <ul>
+        <li><strong>赛前快速扫一眼</strong> —— 版面按时间倒序排列，没有复杂层级，适合跳过首页直接进入分区。</li>
+        <li><strong>找某个联赛的讨论串</strong> —— 不少热门赛事有固定集中帖，比翻社交媒体的碎片信息更省力。</li>
+        <li><strong>偶尔回顾新闻或战报</strong> —— 帖子标题通常直接，不会故意夸大或隐瞒关键信息。</li>
+        <li><strong>避开信息噪音</strong> —— 没有直播弹幕、没有自动播放视频，你有权自己选择点开什么。</li>
+      </ul>
+
+      <div class="note">
+        ⚡ 一点提醒：该站点托管于境外，偶尔会出现加载延迟或短暂无法访问的情况。建议使用主流浏览器，
+        并避免在公共网络下输入任何个人敏感信息。保持浏览习惯的克制总是好的。
+      </div>
+
+      <div style="margin-top: 1.8rem;">
+        <a href="https://site-zh-mk.com" class="link-button">MK体育</a>
+        <span style="font-size: 0.9rem; color: #5a4c40; margin-left: 0.8rem;">直接打开，无需注册即可浏览</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #261f1a;">❓ 常见疑问（简答）</h2>
+      
+      <div class="faq-item">
+        <div class="faq-q">必须登录才能看内容吗？</div>
+        <div class="faq-a">不强制。大多数板块和帖子对游客可见，只有回复或发帖才需要账号。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">手机浏览体验如何？</div>
+        <div class="faq-a">页面没有专门适配移动端，但文字阅读基本正常。横屏或平板体验更佳。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">信息来源可靠吗？</div>
+        <div class="faq-a">属于用户生成内容，和任何论坛一样，需要自己甄别。核心比赛结果和官方数据一般有引用。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">有没有App或推送？</div>
+        <div class="faq-a">目前只有网页版，无推送通知。适合不想被手机打扰的人。</div>
+      </div>
+      <div style="margin-top: 0.8rem; font-size: 0.9rem; color: #5a4c40;">
+        如果还有其他疑问，可以到站内的“帮助”版块找找旧帖，或者随意翻翻置顶。
+      </div>
+    </div>
+
+    <div class="footer-note">
+      以上内容基于个人使用感受整理 · 保持适度，比信息本身更重要。
+    </div>
+  </div>
+</body>
+</html>
